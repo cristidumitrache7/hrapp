@@ -44,6 +44,12 @@ public class CacheConfiguration {
             cm.createCache(ro.db.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(ro.db.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(ro.db.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(ro.db.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.db.domain.Department.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.db.domain.Department.class.getName() + ".employees", jcacheConfiguration);
+            cm.createCache(ro.db.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(ro.db.domain.Employee.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(ro.db.domain.Job.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
